@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "devchatpro"
+version = "0.1.0"
+description = "description = \": DevChatPro is a web application designed to assist developers in managing their projects, tracking progress, and facilitating communication through real-time chat rooms.\""
+authors = ["Aleksa-Lukic <aleksalukic92@web.de>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "app" },]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.103.1"}
+pydantic = "^2.3.0"
+pydantic-config = {extras = ["email"], version = "^0.2.3"}
+bcrypt = "^4.0.1"
+python-jose = "^3.3.0"
+SQLAlchemy = "^2.0.21"
+Jinja2 = "^3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
