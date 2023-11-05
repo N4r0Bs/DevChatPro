@@ -14,6 +14,7 @@ DevChatPro wurde entwickelt, um die Entwicklung von Softwareprojekten zu optimie
   - Echtzeit-Chat
   - Nachrichtenverlauf
 
+
 - **Projektmanagement:**
   - Projekte erstellen
   - Projekte verwalten
@@ -86,7 +87,7 @@ DevChatPro
 │  ├─ api
 │  │  ├─ auth
 │  │  │  ├─ auth_crypt.py
-│  │  │  ├─ auth_models.py
+│  │  │  ├─ auth_models_schemas.py
 │  │  │  ├─ auth_router.py
 │  │  │  ├─ auth_schemas.py
 │  │  │  ├─ auth_services.py

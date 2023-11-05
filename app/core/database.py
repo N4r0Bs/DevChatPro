@@ -1,6 +1,9 @@
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import DeclarativeBase, Session
 
+from typing import Annotated
+from fastapi import Depends
+
 from app.core.config import DatabaseConfiguration
 
 sqlalchemy_metadata = MetaData()
@@ -19,4 +22,5 @@ async def db_session() -> Session:
     with Session(bind=engine) as session:
         yield session
         
-    
+
+db_dependency = Annotated[Session, Depends(db_session)]

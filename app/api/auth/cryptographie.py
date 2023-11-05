@@ -1,5 +1,4 @@
 from typing import Optional
-from jose import jwt
 
 import hashlib
 

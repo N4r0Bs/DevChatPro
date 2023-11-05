@@ -2,7 +2,8 @@ from app.core.database import Model
 from pydantic import BaseModel
 
 
-from sqlalchemy import Integer, String, Boolean, Column, DATETIME, Enum
+from sqlalchemy import Integer, String, Boolean, Column, DATETIME, Enum, ForeignKey
+from sqlalchemy.orm import relationship
 from enum import Enum as Enumaration
 from datetime import datetime
 
@@ -22,6 +23,7 @@ class UserModel(Model):
     registered_at = Column(DATETIME, default=datetime.utcnow, nullable=False)
     role = Column(Enum(Role), default=Role.MEMBER, index=True)
     
+    
 class UserRegister(BaseModel):
     username: str
     password: str
@@ -29,8 +31,27 @@ class UserRegister(BaseModel):
     is_active: bool
     role: Role
     
+    
 class UserRegisterResponse(BaseModel):
     username: str
     email: str
     is_active: bool
     role: Role
+
+
+class UserUpdate(BaseModel):
+    username: str
+    email: str
+    password: str
+    is_active: bool
+    role: Role
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+    
+    
+class TokenData(BaseModel):
+    username: str | None = None
+    
