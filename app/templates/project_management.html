@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevChat</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material.min.css">
+
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="mdc-top-app-bar mdc-top-app-bar--fixed">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="/" class="material-icons mdc-top-app-bar__title">chat</a> <span class="mdc-top-app-bar__title mdc-top-app-bar__title--large">Welcome back, {{ username }}!</span>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>DevChat</h1>
+      <p>Welcome to DevChat, your platform for chat and collaboration.</p>
+
+      <div class="actions">
+        <a href="/login" class="mdc-button mdc-button--outlined">Login</a> <a href="/explore" class="mdc-button mdc-button--secondary">Explore anonymously</a>
+      </div>
+
+      <div class="user-content">
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Powered by Google Search</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <script src="https://unpkg.com/material-components-web@latest/dist/material.min.js"></script>
+  <script src="static/js/main.js"></script> </body>
+</html>

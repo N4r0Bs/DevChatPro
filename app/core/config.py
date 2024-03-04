@@ -18,6 +18,8 @@ class ProjectSettings(object):
 class ResourcePaths(object):
     static = Path(__file__).parent.parent / "static"
     templates = Path(__file__).parent.parent / "templates"
+    auth = Path(__file__).parent.parent / "templates" / "auth"
+
 
 class DatabaseConfiguration(object):
     SQLITE =  f"sqlite:///{Path(__file__).parent}/sqlite_database.db"
